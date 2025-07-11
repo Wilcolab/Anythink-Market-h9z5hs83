@@ -1,8 +1,3 @@
-on:
-  pull_request:
-    branches:
-      - main
-
 jobs:
   wilco:
     runs-on: ubuntu-latest
@@ -22,6 +17,9 @@ jobs:
         uses: supercharge/mongodb-github-action@1.6.0
         with:
           mongodb-version: "4.4"
+
+      - name: Install MongoDB Shell
+        run: sudo apt-get update && sudo apt-get install -y mongodb-clients
 
       - uses: oNaiPs/secrets-to-env-action@v1
         with:
