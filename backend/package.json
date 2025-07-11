@@ -23,6 +23,7 @@
     "express-async-handler": "^1.2.0",
     "express-jwt": "3.3.0",
     "express-session": "1.13.0",
+    "faker": "5.5.3",
     "jsonwebtoken": "7.1.9",
     "method-override": "2.3.5",
     "methods": "1.1.2",
