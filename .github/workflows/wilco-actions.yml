@@ -23,6 +23,11 @@ jobs:
         with:
           mongodb-version: "4.4"
 
+      - name: Install MongoDB Shell
+        run: 
+          sudo apt-get update
+          sudo apt-get install -y mongodb-clients
+
       - uses: oNaiPs/secrets-to-env-action@v1
         with:
           secrets: ${{ toJSON(secrets) }}
