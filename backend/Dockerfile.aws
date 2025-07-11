@@ -1,8 +1,14 @@
 FROM node:16
 
+# Set working directory
 WORKDIR /usr/src
+
+# Copy backend and .wilco files
 COPY backend ./backend
 COPY .wilco ./.wilco
+
+# Install MongoDB client tools
+RUN apt-get update && apt-get install -y mongodb-clients
 
 # Pre-install npm packages
 WORKDIR /usr/src/backend
